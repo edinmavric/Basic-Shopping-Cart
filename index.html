@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/styles/app.css" />
+    <script src="assets/scripts/app.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="shop-container">
+        <h1>Simple JavaScript Shopping Cart</h1>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <h3 class="product">Product</h3>
+          <span>Product description</span>
+          <p class="price">$5.05</p>
+          <button class="add-to-cart">Add To Cart</button>
+        </div>
+        <div class="card">
+          <h3 class="product">Product</h3>
+          <span>Product description</span>
+          <p class="price">$1.05</p>
+          <button class="add-to-cart">Add To Cart</button>
+        </div>
+        <div class="card">
+          <h3 class="product">Product</h3>
+          <span>Product description</span>
+          <p class="price">$15.05</p>
+          <button class="add-to-cart">Add To Cart</button>
+        </div>
+      </div>
+      <div class="super-cart">
+        <h2>Cart</h2>
+        <div class="cart">
+          <div class="cart-upper">
+            <div class="product-price">
+              <span>Product</span>
+              <span>Price</span>
+            </div>
+            <hr />
+            <ul id="list" style="padding: 0"></ul>
+          </div>
+          <div class="cart-lower">
+            <div class="items-total">
+              <span>Items</span>
+              <span>Total:</span>
+              <span id="total"></span>
+            </div>
+            <hr />
+            <div class="cart-buttons">
+              <button id="empty-cart">Empty Cart</button>
+              <button id="checkout">Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

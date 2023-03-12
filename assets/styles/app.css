@@ -1,0 +1,78 @@
+html {
+  font-family: sans-serif;
+}
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  height: 100vh;
+}
+.container {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+}
+.shop-container {
+  display: flex;
+  justify-content: center;
+}
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px 29px;
+  margin: 10px;
+  border: 1px solid orange;
+  border-radius: 4px;
+}
+button {
+  color: white;
+  background-color: orange;
+  border: 1px solid orangered;
+  border-radius: 12px;
+  padding: 8px;
+  margin: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: orangered;
+  border: 1px solid orange;
+  transform: scale(0.95);
+}
+.cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  border: 1px solid orange;
+  border-radius: 4px;
+  width: 41vw;
+  padding: 1px 12px 30px 1px;
+}
+.super-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid orange;
+  border-radius: 6px;
+}
+.cart-upper,
+.cart-lower {
+  padding: 20px;
+}
+ul {
+  list-style: none;
+}
