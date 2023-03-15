@@ -61,6 +61,8 @@ emptyCartBtn.addEventListener("click", () => {
     document.querySelector(".cart-list").innerHTML = "";
     cart = [];
   }
+  const cartHTML = `$0`;
+  document.getElementById("total").innerHTML = cartHTML;
 });
 
 const checkoutCartBtn = document.getElementById("checkout");
@@ -72,4 +74,6 @@ checkoutCartBtn.addEventListener("click", () => {
     document.querySelector(".cart-list").innerHTML = "";
     cart = [];
   }
+  const cartHTML = `$0`;
+  document.getElementById("total").innerHTML = cartHTML;
 });
