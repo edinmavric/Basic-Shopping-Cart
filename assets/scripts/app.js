@@ -11,6 +11,11 @@ function addToCart(index) {
   displayCart();
 }
 
+function calculateTotalCost() {
+  const totalCost = cart.reduce((acc, item) => acc + item.price, 0);
+  return totalCost;
+}
+
 function displayItems() {
   const itemList = items
     .map((item, index) => {
@@ -35,7 +40,12 @@ function displayCart() {
     `;
     })
     .join("");
+
   document.querySelector(".cart-list").innerHTML = cartList;
+
+  const totalCost = calculateTotalCost();
+  const cartHTML = `$${totalCost}`;
+  document.getElementById("total").innerHTML = cartHTML;
 }
 
 displayItems();
@@ -44,6 +54,9 @@ displayCart();
 const emptyCartBtn = document.getElementById("empty-cart");
 emptyCartBtn.addEventListener("click", () => {
   let confirmEmpty = confirm("Are you sure you want to empty cart?");
+  if (cart.length === 0) {
+    confirm("You can't empty cart when it's already empty!");
+  }
   if (confirmEmpty === true) {
     document.querySelector(".cart-list").innerHTML = "";
     cart = [];
