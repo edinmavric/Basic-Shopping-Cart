@@ -52,7 +52,11 @@ emptyCartBtn.addEventListener("click", () => {
 
 const checkoutCartBtn = document.getElementById("checkout");
 checkoutCartBtn.addEventListener("click", () => {
-  alert("Succesfull purchase, come back again!");
-  document.querySelector(".cart-list").innerHTML = "";
-  cart = [];
+  if (cart.length === 0) {
+    alert("Please add items to the cart!");
+  } else {
+    alert("Succesfull purchase, come back again!");
+    document.querySelector(".cart-list").innerHTML = "";
+    cart = [];
+  }
 });
