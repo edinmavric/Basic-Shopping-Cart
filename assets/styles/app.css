@@ -8,7 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  background: linear-gradient(0.08turn, #3f87a6, #ebf8e1, #f69d3c);
   height: 100vh;
 }
 .container {
@@ -26,16 +26,6 @@ body {
 .card-container {
   display: flex;
   justify-content: center;
-}
-.card {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 20px 29px;
-  margin: 10px;
-  border: 1px solid orange;
-  border-radius: 4px;
 }
 button {
   color: white;
@@ -73,6 +63,13 @@ button:hover {
 .cart-lower {
   padding: 20px;
 }
-ul {
-  list-style: none;
+.cart-list {
+  display: flex;
+  flex-direction: column;
+}
+.item-list {
+  display: flex;
+  padding: 12px;
+  margin: 8px;
+  border-radius: 4px;
 }
