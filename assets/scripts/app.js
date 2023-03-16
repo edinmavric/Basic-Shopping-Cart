@@ -55,7 +55,7 @@ const emptyCartBtn = document.getElementById("empty-cart");
 emptyCartBtn.addEventListener("click", () => {
   let confirmEmpty = confirm("Are you sure you want to empty cart?");
   if (cart.length === 0) {
-    confirm("You can't empty the cart when it's already empty!");
+    alert("You can't empty the cart when it's already empty!");
   } else if (confirmEmpty === true) {
     document.querySelector(".cart-list").innerHTML = "";
     cart = [];
