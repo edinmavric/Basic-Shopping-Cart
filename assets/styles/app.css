@@ -9,7 +9,7 @@ body {
   align-items: center;
   flex-direction: column;
   background: linear-gradient(0.08turn, #3f87a6, #ebf8e1, #f69d3c);
-  height: 100vh;
+  min-height: 100vh;
 }
 .container {
   background-color: white;
@@ -17,7 +17,11 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border: 1px solid;
+  border-radius: 6px;
   padding: 40px;
+  box-shadow: 5px 5px 5px rgba(255, 166, 0, 0.35);
+  background: linear-gradient(rgb(236, 236, 236), white, whitesmoke);
 }
 .shop-container {
   display: flex;
@@ -71,5 +75,16 @@ button:hover {
   display: flex;
   padding: 12px;
   margin: 8px;
+  border-radius: 4px;
+}
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid orange;
+  min-width: 10vw;
   border-radius: 4px;
 }

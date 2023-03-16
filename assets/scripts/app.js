@@ -1,7 +1,7 @@
 const items = [
-  { name: "apple", price: 10 },
-  { name: "banana", price: 20 },
-  { name: "peach", price: 30 },
+  { name: "apple", price: 9.99 },
+  { name: "pear", price: 19.99 },
+  { name: "peach", price: 28.99 },
 ];
 
 let cart = [];
@@ -20,7 +20,7 @@ function displayItems() {
   const itemList = items
     .map((item, index) => {
       return `
-      <div style="padding: 20px; border: 1px solid orange;">
+      <div class="products">
       <p>${item.name} - $${item.price}</p>
       <button onclick="addToCart(${index})">Add to Cart</button>
       </div>
@@ -44,7 +44,7 @@ function displayCart() {
   document.querySelector(".cart-list").innerHTML = cartList;
 
   const totalCost = calculateTotalCost();
-  const cartHTML = `$${totalCost}`;
+  const cartHTML = `$${totalCost.toFixed(2)}`;
   document.getElementById("total").innerHTML = cartHTML;
 }
 
@@ -55,9 +55,8 @@ const emptyCartBtn = document.getElementById("empty-cart");
 emptyCartBtn.addEventListener("click", () => {
   let confirmEmpty = confirm("Are you sure you want to empty cart?");
   if (cart.length === 0) {
-    confirm("You can't empty cart when it's already empty!");
-  }
-  if (confirmEmpty === true) {
+    confirm("You can't empty the cart when it's already empty!");
+  } else if (confirmEmpty === true) {
     document.querySelector(".cart-list").innerHTML = "";
     cart = [];
   }
